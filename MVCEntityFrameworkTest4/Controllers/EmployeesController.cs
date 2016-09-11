@@ -25,6 +25,11 @@ namespace MVCEntityFrameworkTest4.Controllers
             //return View(db.Employees.ToList());
         }
 
+        public ActionResult Create()
+        {
+            return View();
+        }
+
         //// GET: Employees/Details/5
         //public ActionResult Details(int? id)
         //{
