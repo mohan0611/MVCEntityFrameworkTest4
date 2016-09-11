@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using System.Data.Entity;
+
 
 namespace MVCEntityFrameworkTest4
 {
@@ -12,6 +14,7 @@ namespace MVCEntityFrameworkTest4
     {
         protected void Application_Start()
         {
+            Database.SetInitializer<MVCEntityFrameworkTest4.Data.DBContext.MyDatabaseContext>(null);
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
